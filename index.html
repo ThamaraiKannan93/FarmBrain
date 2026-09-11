@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Farm Brain — the operating system for smart agriculture. Aquaponics, hydroponics, and precision farming unified by a single AI-powered platform." />
+  <meta name="theme-color" content="#050b08" />
+  <title>Farm Brain — Smart Agriculture Systems</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Sora:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <!-- Skip link for accessibility -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a class="brand" href="#" aria-label="Farm Brain — home">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="34" height="34" fill="none">
+            <circle cx="16" cy="16" r="15" fill="url(#brandGrad)" opacity="0.18"/>
+            <path d="M16 25c-5 0-9-3.5-9-9 0-1.2.2-2.3.6-3.4C9 15 12 17 16 17c-2-2-3-4.5-3-7.5 0-1 .1-2 .4-3C15.5 8.4 19 11 21 15c.6-2 .6-4 .2-6.3C24 11 25 14 25 17c0 5-4 8-9 8z" fill="url(#brandGrad)"/>
+            <defs>
+              <linearGradient id="brandGrad" x1="4" y1="4" x2="28" y2="28" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#86efac"/><stop offset="1" stop-color="#22c55e"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </span>
+        <span class="brand__text"><span>Farm</span><span class="brand__accent">Brain</span></span>
+      </a>
+
+      <nav class="nav__menu" id="navMenu" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a href="#features">Platform</a></li>
+          <li><a href="#solutions">Solutions</a></li>
+          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+        </ul>
+        <a class="btn btn--primary nav__cta" href="#contact">Get Started
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </nav>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="home">
+      <div class="hero__grid-bg" aria-hidden="true"></div>
+      <div class="hero__glow" aria-hidden="true"></div>
+
+      <div class="container hero__inner">
+        <p class="hero__badge reveal">
+          <span class="dot"></span> Now in India
+          <span class="hero__badge-sep"></span>
+          <span class="hero__badge-alt">Smart farming suite now live →</span>
+        </p>
+
+        <h1 class="hero__title reveal">
+          The operating system<br />
+          for <span class="text-gradient">smart agriculture.</span>
+        </h1>
+
+        <p class="hero__lead reveal">
+          Aquaponics, hydroponics, and precision farming — unified by a single
+          AI-powered platform. Real-time sensor intelligence, automated
+          optimization, and yields that defy tradition.
+        </p>
+
+        <div class="hero__actions reveal">
+          <a class="btn btn--primary btn--lg" href="#contact">Start Your Journey
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn--ghost btn--lg" href="#dashboard">See platform demo</a>
+        </div>
+
+        <ul class="hero__tags reveal">
+          <li>Precision Farming</li>
+          <li>Aquaponics</li>
+          <li>AI Yield Optimization</li>
+          <li>Sensor Systems</li>
+        </ul>
+      </div>
+
+      <!-- Floating live-sensor card -->
+      <aside class="hero__card hero__card--sensors float-slow" aria-hidden="true">
+        <p class="chip"><span class="dot"></span> LIVE SENSORS</p>
+        <dl class="sensor-rows">
+          <div><dt>pH</dt><dd><span class="val" data-live="6.3" data-min="6.1" data-max="6.6" data-dp="1">6.3</span></dd></div>
+          <div><dt>EC</dt><dd><span class="val" data-live="2.1" data-min="1.9" data-max="2.3" data-dp="1">2.1</span> <small>mS</small></dd></div>
+          <div><dt>DO</dt><dd><span class="val" data-live="8.8" data-min="8.3" data-max="9.0" data-dp="1">8.8</span> <small>mg/L</small></dd></div>
+          <div><dt>Temp</dt><dd><span class="val" data-live="22.2" data-min="21.8" data-max="22.8" data-dp="1">22.2</span> <small>°C</small></dd></div>
+        </dl>
+      </aside>
+
+      <!-- Floating yield forecast card -->
+      <aside class="hero__card hero__card--yield float-fast" aria-hidden="true">
+        <p class="chip chip--blue"><span class="dot dot--blue"></span> YIELD FORECAST</p>
+        <svg class="spark" viewBox="0 0 120 48" preserveAspectRatio="none">
+          <polyline points="0,44 20,40 40,34 60,30 80,20 100,12 120,4" fill="none" stroke="url(#sparkGrad)" stroke-width="2.5" stroke-linecap="round"/>
+          <polygon points="0,44 20,40 40,34 60,30 80,20 100,12 120,4 120,48 0,48" fill="url(#sparkFill)" opacity="0.25"/>
+          <defs>
+            <linearGradient id="sparkGrad" x1="0" y1="0" x2="120" y2="0"><stop stop-color="#22c55e"/><stop offset="1" stop-color="#86efac"/></linearGradient>
+            <linearGradient id="sparkFill" x1="0" y1="0" x2="0" y2="48"><stop stop-color="#22c55e"/><stop offset="1" stop-color="#22c55e" stop-opacity="0"/></linearGradient>
+          </defs>
+        </svg>
+        <p class="hero__card-metric"><strong class="text-gradient">+12.4%</strong> vs last cycle</p>
+      </aside>
+
+      <a class="hero__scroll" href="#features" aria-label="Scroll down">
+        <span>SCROLL</span>
+        <span class="hero__scroll-line" aria-hidden="true"></span>
+      </a>
+    </section>
+
+    <!-- ===================== FEATURES ===================== -->
+    <section class="section features" id="features">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Core Capabilities</p>
+          <h2 class="section__title">Technology That<br /><span class="text-gradient">Transforms Agriculture</span></h2>
+          <p class="section__lead">Our integrated platform unifies hardware, software, and biological systems into the most efficient farming operation on earth.</p>
+        </header>
+
+        <div class="feature-grid">
+          <article class="feature-card reveal">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="2.5"/></svg>
+            </div>
+            <h3>Aquaponics Systems</h3>
+            <p>Closed-loop ecosystems where fish and plants grow together. Zero waste, maximum yield, minimal water.</p>
+            <ul class="tick-list">
+              <li>RAS fish tanks</li><li>Biofiltration</li><li>Floating raft beds</li>
+            </ul>
+            <a class="link-arrow" href="#solutions">Learn more <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22V8"/><path d="M12 8c0-3 2-5 5-5 0 3-2 5-5 5Z"/><path d="M12 12c0-3-2-5-5-5 0 3 2 5 5 5Z"/></svg>
+            </div>
+            <h3>Hydroponics</h3>
+            <p>Soil-free growing with precise nutrient delivery. From rooftops to deserts — grow anywhere, with 90% less water.</p>
+            <ul class="tick-list">
+              <li>NFT &amp; DWC systems</li><li>Vertical towers</li><li>Auto dosing</li>
+            </ul>
+            <a class="link-arrow" href="#solutions">Learn more <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="feature-card feature-card--flagship reveal">
+            <span class="badge badge--flag">Flagship</span>
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 9h6v6H9z"/><path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"/></svg>
+            </div>
+            <h3>AI Yield Optimization</h3>
+            <p>ML models that predict, prescribe, and optimize every growth cycle. Real-time adjustments, predictive insight.</p>
+            <ul class="tick-list">
+              <li>Computer vision</li><li>Predictive analytics</li><li>Auto-recipe tuning</li>
+            </ul>
+            <a class="link-arrow" href="#solutions">Learn more <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 20v-6M12 8V4"/><circle cx="12" cy="11" r="3"/><path d="M5 20a7 7 0 0 1 14 0"/></svg>
+            </div>
+            <h3>Sensor Systems</h3>
+            <p>IoT networks monitor pH, EC, temp, humidity, light, and dissolved oxygen — beaming real-time data to the cloud.</p>
+            <ul class="tick-list">
+              <li>LoRaWAN mesh</li><li>Calibration-free</li><li>5-year battery</li>
+            </ul>
+            <a class="link-arrow" href="#solutions">Learn more <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg>
+            </div>
+            <h3>Growth Analytics</h3>
+            <p>Comprehensive dashboards visualize every metric. Track growth, nutrients, environment, and profitability.</p>
+            <ul class="tick-list">
+              <li>Custom KPIs</li><li>Yield reports</li><li>Export &amp; API</li>
+            </ul>
+            <a class="link-arrow" href="#solutions">Learn more <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/><circle cx="12" cy="12" r="4"/></svg>
+            </div>
+            <h3>Climate Control</h3>
+            <p>Automated environmental management for greenhouses and indoor farms — temp, humidity, CO₂, and light.</p>
+            <ul class="tick-list">
+              <li>HVAC integration</li><li>LED spectrum tuning</li><li>CO₂ enrichment</li>
+            </ul>
+            <a class="link-arrow" href="#solutions">Learn more <span aria-hidden="true">→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PLATFORM / DASHBOARD ===================== -->
+    <section class="section platform" id="dashboard">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">The Platform</p>
+          <h2 class="section__title">Your farm,<br /><span class="text-gradient">at your fingertips.</span></h2>
+          <p class="section__lead">A unified command center for every grow zone, sensor, and AI insight. Monitor, automate, and optimize — from anywhere.</p>
+        </header>
+
+        <div class="dashboard reveal">
+          <div class="dashboard__bar">
+            <span class="dots"><i></i><i></i><i></i></span>
+            <span class="dashboard__url">app.farmbrain.in / dashboard</span>
+            <span class="chip chip--live"><span class="dot"></span> Live</span>
+          </div>
+
+          <div class="dashboard__body">
+            <aside class="dashboard__side">
+              <nav class="dash-nav">
+                <a class="is-active" href="#dashboard">Overview</a>
+                <a href="#dashboard">Sensors</a>
+                <a href="#dashboard">Analytics</a>
+                <a href="#dashboard">AI Insights</a>
+                <a href="#dashboard">Automation</a>
+              </nav>
+              <div class="dash-zones">
+                <p class="dash-zones__label">Zones</p>
+                <span>Greenhouse A</span>
+                <span>Aqua Pod 2</span>
+                <span>Vertical Stack</span>
+              </div>
+            </aside>
+
+            <div class="dashboard__main">
+              <div class="dash-head">
+                <div>
+                  <h3>Farm Overview</h3>
+                  <p class="muted">3 zones · 142 sensors · all systems nominal</p>
+                </div>
+                <div class="seg" role="group" aria-label="Time range">
+                  <button class="is-active">24h</button><button>7d</button><button>30d</button>
+                </div>
+              </div>
+
+              <div class="stat-grid">
+                <div class="stat">
+                  <p class="stat__label">Avg pH</p>
+                  <p class="stat__value">6.4 <span class="pill pill--up">+0.2</span></p>
+                </div>
+                <div class="stat">
+                  <p class="stat__label">Water Use</p>
+                  <p class="stat__value">128<small>L</small> <span class="pill pill--down">-94%</span></p>
+                </div>
+                <div class="stat">
+                  <p class="stat__label">Yield Forecast</p>
+                  <p class="stat__value">2.4<small>t</small> <span class="pill pill--up">+12%</span></p>
+                </div>
+                <div class="stat">
+                  <p class="stat__label">Energy</p>
+                  <p class="stat__value">412<small>kWh</small> <span class="pill pill--down">-8%</span></p>
+                </div>
+              </div>
+
+              <div class="dash-charts">
+                <div class="chart-card">
+                  <div class="chart-card__head">
+                    <div><h4>Growth Velocity</h4><p class="muted">Across all active zones</p></div>
+                    <div class="legend">
+                      <span><i class="sw sw--green"></i>Aquaponics</span>
+                      <span><i class="sw sw--cyan"></i>Hydroponics</span>
+                      <span><i class="sw sw--amber"></i>Vertical</span>
+                    </div>
+                  </div>
+                  <svg class="area-chart" viewBox="0 0 320 120" preserveAspectRatio="none">
+                    <polyline points="0,95 45,88 90,80 135,60 180,55 225,38 270,28 320,15" fill="none" stroke="#22c55e" stroke-width="2.5"/>
+                    <polyline points="0,105 45,98 90,92 135,82 180,70 225,64 270,50 320,42" fill="none" stroke="#06b6d4" stroke-width="2" opacity="0.8"/>
+                    <polyline points="0,112 45,108 90,100 135,96 180,88 225,80 270,74 320,66" fill="none" stroke="#f59e0b" stroke-width="2" opacity="0.7"/>
+                  </svg>
+                </div>
+
+                <div class="chart-card">
+                  <div class="chart-card__head">
+                    <div><h4>Active Sensors</h4><p class="muted">142 online</p></div>
+                  </div>
+                  <ul class="sensor-list">
+                    <li><span class="sensor-list__id">pH-A1</span><span class="muted">Greenhouse A</span><b>6.4 pH</b></li>
+                    <li><span class="sensor-list__id">EC-A1</span><span class="muted">Greenhouse A</span><b>2.1 mS</b></li>
+                    <li><span class="sensor-list__id">DO-B2</span><span class="muted">Aqua Pod 2</span><b>5.8 mg/L</b></li>
+                    <li><span class="sensor-list__id">TEMP-V3</span><span class="muted">Vertical Stack</span><b>22.1°C</b></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dashboard__ai float-slow">
+            <p class="chip chip--green"><span class="dot"></span> AI Recommendation</p>
+            <p class="dashboard__ai-text">Increase Zone 2 EC by 0.3 mS</p>
+            <p><strong class="text-gradient">+12.4% yield</strong> <span class="muted">vs last cycle</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SOLUTIONS (TABS) ===================== -->
+    <section class="section solutions" id="solutions">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Solutions</p>
+          <h2 class="section__title">Three pillars,<br /><span class="text-gradient">one ecosystem.</span></h2>
+          <p class="section__lead">Whichever path you choose, Farm Brain unifies everything under a single intelligent platform.</p>
+        </header>
+
+        <div class="tabs reveal" id="solutionTabs">
+          <div class="tabs__list" role="tablist" aria-label="Solutions">
+            <button class="tabs__tab is-active" role="tab" aria-selected="true" aria-controls="panel-aqua" id="tab-aqua">Aquaponics</button>
+            <button class="tabs__tab" role="tab" aria-selected="false" aria-controls="panel-hydro" id="tab-hydro">Hydroponics</button>
+            <button class="tabs__tab" role="tab" aria-selected="false" aria-controls="panel-precision" id="tab-precision">Precision Farming</button>
+          </div>
+
+          <!-- Aquaponics panel -->
+          <div class="tabs__panel is-active" role="tabpanel" id="panel-aqua" aria-labelledby="tab-aqua" tabindex="0">
+            <div class="solution">
+              <div class="solution__content">
+                <h3>Closed-loop aquaponics, fully automated.</h3>
+                <p>Fish and plants in symbiosis. Fish waste fertilizes the plants; plants purify the water. Our systems automate the entire nitrogen cycle.</p>
+                <ul class="tick-list tick-list--lg">
+                  <li>RAS fish tanks with 95% water recirculation</li>
+                  <li>Multi-stage biofiltration</li>
+                  <li>Tilapia, trout, perch &amp; more</li>
+                  <li>Floating raft &amp; media beds</li>
+                </ul>
+                <div class="metric-row">
+                  <div><strong>95%</strong><span>water recirculated</span></div>
+                  <div><strong>2x</strong><span>output per sqm</span></div>
+                  <div><strong>0</strong><span>chemical fertilizers</span></div>
+                </div>
+              </div>
+              <div class="solution__visual">
+                <div class="visual-card visual-card--aqua">
+                  <span class="visual-tag visual-tag--top">PLANT BED</span>
+                  <div class="visual-plants" aria-hidden="true">
+                    <i></i><i></i><i></i><i></i><i></i><i></i>
+                  </div>
+                  <div class="visual-water" aria-hidden="true"></div>
+                  <span class="visual-tag visual-tag--bottom">FISH TANK</span>
+                  <div class="visual-fish" aria-hidden="true"><span></span><span></span><span></span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hydroponics panel -->
+          <div class="tabs__panel" role="tabpanel" id="panel-hydro" aria-labelledby="tab-hydro" tabindex="0" hidden>
+            <div class="solution">
+              <div class="solution__content">
+                <h3>Hydroponics, perfectly tuned.</h3>
+                <p>Soil-free precision growing. Roots bathed in nutrient-rich, oxygenated solution — delivering 30–50% faster growth with a fraction of the water.</p>
+                <ul class="tick-list tick-list--lg">
+                  <li>NFT, DWC &amp; aeroponics systems</li>
+                  <li>Vertical towers — 10x density</li>
+                  <li>Automatic nutrient dosing</li>
+                  <li>Full-spectrum LED integration</li>
+                </ul>
+                <div class="metric-row">
+                  <div><strong>90%</strong><span>less water</span></div>
+                  <div><strong>10x</strong><span>density vs soil</span></div>
+                  <div><strong>50%</strong><span>faster growth</span></div>
+                </div>
+              </div>
+              <div class="solution__visual">
+                <div class="visual-card visual-card--hydro">
+                  <div class="tower" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                  <span class="visual-tag visual-tag--top">VERTICAL TOWER · NFT</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Precision panel -->
+          <div class="tabs__panel" role="tabpanel" id="panel-precision" aria-labelledby="tab-precision" tabindex="0" hidden>
+            <div class="solution">
+              <div class="solution__content">
+                <h3>Precision farming, intelligent at every layer.</h3>
+                <p>Every square meter monitored. Every variable optimized. Computer vision, weather forecasting, and prescriptive AI applied to open fields and greenhouses alike.</p>
+                <ul class="tick-list tick-list--lg">
+                  <li>Computer-vision pest detection</li>
+                  <li>Variable rate irrigation</li>
+                  <li>Drone &amp; satellite imagery</li>
+                  <li>Predictive harvest scheduling</li>
+                </ul>
+                <div class="metric-row">
+                  <div><strong>40%</strong><span>input reduction</span></div>
+                  <div><strong>30%</strong><span>yield increase</span></div>
+                  <div><strong>99.2%</strong><span>uptime SLA</span></div>
+                </div>
+              </div>
+              <div class="solution__visual">
+                <div class="visual-card visual-card--field">
+                  <span class="visual-tag visual-tag--top">FIELD HEATMAP</span>
+                  <div class="heatmap" aria-hidden="true"></div>
+                  <span class="visual-tag visual-tag--bottom">REAL-TIME · 24 SENSORS</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="section about" id="about">
+      <div class="container about__grid">
+        <div class="about__visual reveal">
+          <div class="about__badge about__badge--1">
+            <strong class="text-gradient">98%</strong>
+            <span>Water Efficiency</span>
+          </div>
+          <div class="about__badge about__badge--2">
+            <strong>Carbon-neutral</strong>
+            <span>Operations since 2024</span>
+          </div>
+          <div class="about__orb" aria-hidden="true"></div>
+        </div>
+
+        <div class="about__content reveal">
+          <p class="eyebrow">Who We Are</p>
+          <h2 class="section__title section__title--left">Agriculture meets<br /><span class="text-gradient">intelligence.</span></h2>
+          <p>Farm Brain is a next-generation agri-tech company building the infrastructure for sustainable food production at scale.</p>
+          <p>Our mission is simple: feed more people with fewer resources. By integrating aquaponics, hydroponics, precision farming and AI, we make high-yield sustainable farming accessible to everyone.</p>
+          <ul class="check-list">
+            <li>Founded by agronomists and AI engineers</li>
+            <li>340+ farms deployed across 12 countries</li>
+            <li>Backed by climate-tech leaders</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== STATS STRIP ===================== -->
+    <section class="stats-strip">
+      <div class="container stats-strip__grid">
+        <div class="stat-big reveal"><strong data-count="340" data-suffix="+">340+</strong><span>Farms Deployed</span></div>
+        <div class="stat-big reveal"><strong data-count="90" data-suffix="%">90%</strong><span>Water Saved vs Traditional</span></div>
+        <div class="stat-big reveal"><strong data-count="35" data-suffix="%">35%</strong><span>Avg. Yield Increase</span></div>
+        <div class="stat-big reveal"><strong data-count="12" data-suffix="">12</strong><span>Countries</span></div>
+      </div>
+    </section>
+
+    <!-- ===================== HOW IT WORKS ===================== -->
+    <section class="section process" id="how-it-works">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Process</p>
+          <h2 class="section__title">From idea to harvest,<br /><span class="text-gradient">in four steps.</span></h2>
+        </header>
+
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step__num">01</span>
+            <h3>Assess</h3>
+            <p>We analyze your space, climate, resources, and goals to design the perfect system.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">02</span>
+            <h3>Build</h3>
+            <p>Our engineers install your custom system with full sensor integration and AI onboarding.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">03</span>
+            <h3>Optimize</h3>
+            <p>AI continuously learns from your farm's data, making smarter decisions every cycle.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">04</span>
+            <h3>Scale</h3>
+            <p>Expand with confidence — our modular systems grow with your ambitions.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== PRICING ===================== -->
+    <section class="section pricing" id="pricing">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Plans</p>
+          <h2 class="section__title">Tailored to<br /><span class="text-gradient">your farm.</span></h2>
+          <p class="section__lead">Every farm is different — so every quote is too. Pick the tier that fits your scale, and our team will build a plan around it.</p>
+        </header>
+
+        <div class="price-grid">
+          <article class="price-card reveal">
+            <h3>Pilot</h3>
+            <p class="price-card__desc">For early-stage growers exploring smart agriculture.</p>
+            <p class="price-card__price"><strong>Custom quote</strong><span>based on scope</span></p>
+            <ul class="tick-list">
+              <li>Single grow zone setup</li>
+              <li>Starter sensor package</li>
+              <li>Real-time dashboard access</li>
+              <li>Onboarding &amp; email support</li>
+              <li>AI yield optimization</li>
+            </ul>
+            <a class="btn btn--ghost btn--block" href="#contact">Request a quote</a>
+          </article>
+
+          <article class="price-card price-card--featured reveal">
+            <span class="badge badge--pop">Most popular</span>
+            <h3>Commercial</h3>
+            <p class="price-card__desc">For working farms ready to scale with intelligence.</p>
+            <p class="price-card__price"><strong>Tailored plan</strong><span>priced to your operation</span></p>
+            <ul class="tick-list">
+              <li>Multi-zone deployment</li>
+              <li>Full sensor mesh coverage</li>
+              <li>AI yield optimization</li>
+              <li>Automation engine &amp; alerts</li>
+              <li>Priority human support</li>
+              <li>API &amp; integrations</li>
+            </ul>
+            <a class="btn btn--primary btn--block" href="#contact">Talk to our team</a>
+          </article>
+
+          <article class="price-card reveal">
+            <h3>Enterprise</h3>
+            <p class="price-card__desc">For multi-site &amp; institutional growers.</p>
+            <p class="price-card__price"><strong>Let's talk</strong><span>bespoke engagement</span></p>
+            <ul class="tick-list">
+              <li>Unlimited zones &amp; sensors</li>
+              <li>Custom AI models</li>
+              <li>Dedicated infrastructure</li>
+              <li>Onsite training &amp; consulting</li>
+              <li>Custom SLA &amp; compliance</li>
+              <li>White-label option</li>
+            </ul>
+            <a class="btn btn--ghost btn--block" href="#contact">Contact sales</a>
+          </article>
+        </div>
+
+        <p class="pricing__note reveal">All plans include hardware setup, software licenses, and the Farm Brain platform — final pricing depends on scope, scale, and location.</p>
+      </div>
+    </section>
+
+    <!-- ===================== FAQ ===================== -->
+    <section class="section faq" id="faq">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">FAQ</p>
+          <h2 class="section__title">Got questions?<br /><span class="text-gradient">We've got answers.</span></h2>
+          <p class="section__lead">Can't find what you're looking for? <a href="#contact">Reach our team</a> — we usually reply within a few hours.</p>
+        </header>
+
+        <div class="accordion reveal" id="accordion">
+          <div class="accordion__item">
+            <button class="accordion__trigger" aria-expanded="false">
+              What's the difference between aquaponics and hydroponics?
+              <span class="accordion__icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion__panel"><p>Hydroponics uses synthetic mineral nutrient solutions to grow plants in water. Aquaponics combines hydroponics with aquaculture — fish provide the nutrients naturally, creating a self-sustaining, organic ecosystem with zero chemical inputs.</p></div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__trigger" aria-expanded="false">
+              How long does installation take?
+              <span class="accordion__icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion__panel"><p>A standard greenhouse pilot takes 4–6 weeks from contract to first harvest cycle. Larger commercial deployments are phased over 2–4 months depending on scale and site readiness.</p></div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__trigger" aria-expanded="false">
+              Do I need technical expertise to operate the system?
+              <span class="accordion__icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion__panel"><p>No. Our platform is designed for growers, not engineers. Most decisions are automated, and our training gets your team fully confident within the first cycle.</p></div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__trigger" aria-expanded="false">
+              Can the system work in extreme climates?
+              <span class="accordion__icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion__panel"><p>Yes. Our climate-controlled installations operate everywhere — from arctic research stations to UAE deserts. The system adapts environmental controls to keep conditions optimal year-round.</p></div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__trigger" aria-expanded="false">
+              What crops can I grow?
+              <span class="accordion__icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion__panel"><p>Leafy greens, herbs, strawberries, tomatoes, peppers, cucumbers, microgreens — the list keeps growing. Our AI tunes the perfect recipe for whatever you choose to grow.</p></div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__trigger" aria-expanded="false">
+              How does pricing scale with farm size?
+              <span class="accordion__icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion__panel"><p>Our plans grow with you. Sensor and zone counts include generous limits, and overage is charged at predictable per-unit rates. Enterprise plans offer fully custom, volume-based pricing.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="section contact" id="contact">
+      <div class="container contact__grid">
+        <div class="contact__intro reveal">
+          <p class="eyebrow">Get in touch</p>
+          <h2 class="section__title section__title--left">Ready to grow<br /><span class="text-gradient">smarter?</span></h2>
+          <p>Join hundreds of forward-thinking growers using Farm Brain to build the future of food production.</p>
+          <ul class="contact__perks">
+            <li><span class="dot"></span> Free consultation</li>
+            <li><span class="dot"></span> No commitment</li>
+            <li><span class="dot"></span> Reply within 24h</li>
+          </ul>
+        </div>
+
+        <form class="contact__form reveal" id="contactForm" novalidate>
+          <div class="field">
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+          </div>
+          <div class="field">
+            <label for="email">Your email</label>
+            <input type="email" id="email" name="email" placeholder="Your email" required />
+          </div>
+          <div class="field">
+            <label for="org">Organization (optional)</label>
+            <input type="text" id="org" name="org" placeholder="Organization (optional)" />
+          </div>
+          <div class="field">
+            <label for="interest">I'm interested in...</label>
+            <select id="interest" name="interest">
+              <option value="" selected disabled>I'm interested in...</option>
+              <option value="aquaponics">Aquaponics Systems</option>
+              <option value="hydroponics">Hydroponics Systems</option>
+              <option value="ai-crop-mgmt">AI Crop Management</option>
+              <option value="sensors">Sensor Deployment</option>
+              <option value="farm-design">Full Farm Design</option>
+              <option value="consultation">Consultation Only</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Tell us about your farm or project — size, location, crops, timeline..."></textarea>
+          </div>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          <button class="btn btn--primary btn--block btn--lg" type="submit">Send message
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7Z"/></svg>
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a class="brand" href="#" aria-label="Farm Brain — home">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="30" height="30" fill="none">
+              <circle cx="16" cy="16" r="15" fill="url(#brandGrad2)" opacity="0.18"/>
+              <path d="M16 25c-5 0-9-3.5-9-9 0-1.2.2-2.3.6-3.4C9 15 12 17 16 17c-2-2-3-4.5-3-7.5 0-1 .1-2 .4-3C15.5 8.4 19 11 21 15c.6-2 .6-4 .2-6.3C24 11 25 14 25 17c0 5-4 8-9 8z" fill="url(#brandGrad2)"/>
+              <defs><linearGradient id="brandGrad2" x1="4" y1="4" x2="28" y2="28" gradientUnits="userSpaceOnUse"><stop stop-color="#86efac"/><stop offset="1" stop-color="#22c55e"/></linearGradient></defs>
+            </svg>
+          </span>
+          <span class="brand__text"><span>Farm</span><span class="brand__accent">Brain</span></span>
+        </a>
+        <p class="footer__tag">Redefining agriculture through technology. Sustainable, scalable, smart.</p>
+      </div>
+
+      <div class="footer__col">
+        <h4>Solutions</h4>
+        <a href="#solutions">Aquaponics</a>
+        <a href="#solutions">Hydroponics</a>
+        <a href="#solutions">AI Optimization</a>
+        <a href="#solutions">Sensor Systems</a>
+        <a href="#dashboard">Platform</a>
+      </div>
+      <div class="footer__col">
+        <h4>Company</h4>
+        <a href="#about">About Us</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+        <a href="#">Careers</a>
+      </div>
+      <div class="footer__col">
+        <h4>Resources</h4>
+        <a href="#how-it-works">How it works</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="footer__col">
+        <h4>Connect</h4>
+        <a href="https://www.linkedin.com/company/farm-brain/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <p>© <span id="year">2026</span> Farm Brain Technologies. All rights reserved.</p>
+      <nav class="footer__legal" aria-label="Legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#" id="cookieSettings">Cookie Settings</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- ===================== COOKIE BANNER ===================== -->
+  <div class="cookie" id="cookieBanner" role="dialog" aria-label="Cookie consent" aria-live="polite" hidden>
+    <div class="cookie__icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><circle cx="9" cy="10" r="1"/><circle cx="14" cy="14" r="1"/><circle cx="15" cy="9" r="1"/></svg>
+    </div>
+    <div class="cookie__body">
+      <p class="cookie__title">We value your privacy</p>
+      <p class="cookie__text">We use cookies to enhance your experience, analyze traffic, and improve our services. Choose which categories you allow — you can change this anytime.</p>
+    </div>
+    <div class="cookie__actions">
+      <button class="btn btn--ghost" data-cookie="reject">Reject all</button>
+      <button class="btn btn--ghost" data-cookie="customize">Customize</button>
+      <button class="btn btn--primary" data-cookie="accept">Accept all</button>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
